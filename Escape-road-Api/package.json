@@ -8,6 +8,7 @@
     "start": "node api/index.js"
   },
   "dependencies": {
+    "@upstash/redis": "^1.37.0",
     "@vercel/kv": "1.0.1",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
