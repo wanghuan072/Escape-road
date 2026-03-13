@@ -13,14 +13,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// CORS Configuration
+// CORS Configuration（放宽，允许所有来源访问 API）
 const corsOptions = {
-  origin: [
-    'http://localhost:5173', // Local frontend dev server
-    'https://escape-road-online.com' // Updated Deployed frontend URL
-   ],
+  origin: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 app.use(cors(corsOptions));
 
