@@ -4,7 +4,7 @@
     <section>
       <div class="container" :style="{ background: gameData.background }">
         <!-- 头部横幅广告-PC -->
-        <aside class="ads-wrapper" v-if="!isMobile">
+        <!-- <aside class="ads-wrapper" v-if="!isMobile">
           <ins
             :key="`pc-top-${adKey}`"
             class="adsbygoogle"
@@ -14,11 +14,53 @@
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
+        </aside> -->
+
+        <!-- ADX 横幅广告-PC-01 -->
+        <aside v-if="!isMobile">
+          <ins
+            class="adsbygoogle"
+            style="display: inline-block; width: 970px; height: 250px"
+            data-ad-client="ca-pub-9435047454967498"
+            data-ad-slot="escape_road_online_adx_ban1"
+            data-tag-src="gamtg"
+          >
+          </ins>
         </aside>
 
         <div class="game-wrap">
+          <!-- ADX 左侧广告-PC-04 -->
+          <aside
+            v-if="!isMobile"
+            style="position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 1000"
+          >
+            <ins
+              class="adsbygoogle"
+              style="display: inline-block; width: 300px; height: 600px"
+              data-ad-client="ca-pub-9435047454967498"
+              data-ad-slot="escape_road_online_adx_R_L_ban3"
+              data-tag-src="gamtg"
+            >
+            </ins>
+          </aside>
+
+          <!-- ADX 右侧广告-PC-05 -->
+          <aside
+            v-if="!isMobile"
+            style="position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 1000"
+          >
+            <ins
+              class="adsbygoogle"
+              style="display: inline-block; width: 300px; height: 600px"
+              data-ad-client="ca-pub-9435047454967498"
+              data-ad-slot="escape_road_online_adx_R_L_ban3"
+              data-tag-src="gamtg"
+            >
+            </ins>
+          </aside>
+
           <!-- 左侧广告-PC -->
-          <aside class="ads-wrapper ads-left" v-if="!isMobile">
+          <!-- <aside class="ads-wrapper ads-left" v-if="!isMobile">
             <ins
               :key="`pc-left-${adKey}`"
               class="adsbygoogle"
@@ -28,10 +70,10 @@
               data-ad-format="auto"
               data-full-width-responsive="true"
             ></ins>
-          </aside>
+          </aside> -->
 
           <!-- 右侧广告-PC -->
-          <aside class="ads-wrapper ads-right" v-if="!isMobile">
+          <!-- <aside class="ads-wrapper ads-right" v-if="!isMobile">
             <ins
               :key="`pc-right-${adKey}`"
               class="adsbygoogle"
@@ -41,12 +83,12 @@
               data-ad-format="auto"
               data-full-width-responsive="true"
             ></ins>
-          </aside>
+          </aside> -->
 
           <!-- 新增：主内容区域外层包裹 -->
           <div class="game-main-area">
             <!-- 移动端头部广告-PH -->
-            <aside class="ads-wrapper" v-if="isMobile">
+            <!-- <aside class="ads-wrapper" v-if="isMobile">
               <ins
                 :key="`mobile-top-${adKey}`"
                 class="adsbygoogle"
@@ -54,6 +96,18 @@
                 data-ad-client="ca-pub-5437957765171705"
                 data-ad-slot="2038341488"
               ></ins>
+            </aside> -->
+
+            <!-- ADX 移动端横幅广告-PH-01 -->
+            <aside v-if="isMobile">
+              <ins
+                class="adsbygoogle"
+                style="display: inline-block; width: 300px; height: 250px"
+                data-ad-client="ca-pub-9435047454967498"
+                data-ad-slot="escape_road_online_adx_R_S_ban3"
+                data-tag-src="gamtg"
+              >
+              </ins>
             </aside>
 
             <!-- 桌面端布局 -->
@@ -114,17 +168,29 @@
             </div>
 
             <!-- Escaperoad-展示广告纵向3 -->
-            <aside class="ads-wrapper" v-if="!isMobile">
-          <ins
-            :key="`pc-top-${adKey}`"
-            class="adsbygoogle"
-            style="display: block"
-            data-ad-client="ca-pub-5437957765171705"
-            data-ad-slot="8679817511"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-        </aside>
+            <!-- <aside class="ads-wrapper" v-if="!isMobile">
+              <ins
+                :key="`pc-top-${adKey}`"
+                class="adsbygoogle"
+                style="display: block"
+                data-ad-client="ca-pub-5437957765171705"
+                data-ad-slot="8679817511"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
+            </aside> -->
+
+            <!-- ADX 横幅广告-PC-02 -->
+            <aside v-if="!isMobile">
+              <ins
+                class="adsbygoogle"
+                style="display: inline-block; width: 970px; height: 250px"
+                data-ad-client="ca-pub-9435047454967498"
+                data-ad-slot="escape_road_online_adx_ban2"
+                data-tag-src="gamtg"
+              >
+              </ins>
+            </aside>
 
             <!-- PC端NewGames，桌面端显示 -->
             <NewGames class="desktop-only" />
@@ -161,7 +227,7 @@
                 </div>
               </section>
               <!-- 移动端中部广告-PH -->
-              <aside class="ads-wrapper" v-if="isMobile">
+              <!-- <aside class="ads-wrapper" v-if="isMobile">
                 <ins
                   :key="`mobile-middle-${adKey}`"
                   class="adsbygoogle"
@@ -169,6 +235,18 @@
                   data-ad-client="ca-pub-5437957765171705"
                   data-ad-slot="3120053515"
                 ></ins>
+              </aside> -->
+
+              <!-- ADX 移动端横幅广告-PH-02 -->
+              <aside v-if="isMobile">
+                <ins
+                  class="adsbygoogle"
+                  style="display: inline-block; width: 300px; height: 250px"
+                  data-ad-client="ca-pub-9435047454967498"
+                  data-ad-slot="escape_road_online_adx_R_S_ban3"
+                  data-tag-src="gamtg"
+                >
+                </ins>
               </aside>
 
               <!-- 移动端NewGames，只在这里渲染一次 -->
@@ -178,8 +256,8 @@
           <!-- 主内容区域外层包裹结束 -->
         </div>
 
-        <!-- 头部横幅广告-PC -->
-        <aside class="ads-wrapper" v-if="!isMobile">
+        <!-- ADS - 横幅广告-PC -->
+        <!-- <aside class="ads-wrapper" v-if="!isMobile">
           <ins
             :key="`pc-top-${adKey}`"
             class="adsbygoogle"
@@ -189,13 +267,24 @@
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
-        </aside>
+        </aside> -->
 
+        <!-- ADX 横幅广告-PC-03 -->
+        <aside v-if="!isMobile">
+          <ins
+            class="adsbygoogle"
+            style="display: inline-block; width: 970px; height: 250px"
+            data-ad-client="ca-pub-9435047454967498"
+            data-ad-slot="escape_road_online_adx_ban2"
+            data-tag-src="gamtg"
+          >
+          </ins>
+        </aside>
 
         <footer class="below" role="contentinfo" aria-label="Game information and recommendations">
           <About :game-id="currentGameId" />
           <!-- 移动端底部广告-PH -->
-          <aside class="ads-wrapper" v-if="isMobile">
+          <!-- <aside class="ads-wrapper" v-if="isMobile">
             <ins
               :key="`mobile-bottom-${adKey}`"
               class="adsbygoogle"
@@ -203,7 +292,20 @@
               data-ad-client="ca-pub-5437957765171705"
               data-ad-slot="2118232531"
             ></ins>
+          </aside> -->
+
+          <!-- ADX 移动端横幅广告-PH-03 -->
+          <aside v-if="isMobile">
+            <ins
+              class="adsbygoogle"
+              style="display: inline-block; width: 300px; height: 250px"
+              data-ad-client="ca-pub-9435047454967498"
+              data-ad-slot="escape_road_online_adx_R_S_ban3"
+              data-tag-src="gamtg"
+            >
+            </ins>
           </aside>
+
           <Recommend :game-id="currentGameId" />
         </footer>
       </div>
@@ -214,7 +316,7 @@
 </template>
 
 <script setup>
-import { computed, watchEffect, onMounted, ref } from 'vue'
+import { computed, watchEffect, onMounted, ref, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { games } from '../data/games'
@@ -242,35 +344,49 @@ const { isMobile } = useDeviceDetection()
 const adKey = ref(0)
 
 // 手动触发广告加载
-const loadAds = () => {
-  if (window.adsbygoogle && typeof window.adsbygoogle.push === 'function') {
+// const loadAds = () => {
+//   if (window.adsbygoogle && typeof window.adsbygoogle.push === 'function') {
+//     try {
+//       // 直接处理所有广告元素，但添加错误处理
+//       const adElements = document.querySelectorAll('.adsbygoogle')
+//       adElements.forEach((el) => {
+//         try {
+//           ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+//         } catch (pushError) {
+//           // 忽略重复加载错误
+//           if (!pushError.message.includes('already have ads')) {
+//             console.error('广告加载失败:', pushError)
+//           }
+//         }
+//       })
+//     } catch (e) {
+//       console.error('广告加载失败:', e)
+//     }
+//   } else {
+//     // 如果 adsbygoogle 还没加载，延迟重试
+//     setTimeout(loadAds, 1000)
+//   }
+// }
+
+const loadGoogleAdxAds = () => {
     try {
-      // 直接处理所有广告元素，但添加错误处理
-      const adElements = document.querySelectorAll('.adsbygoogle')
-      adElements.forEach((el) => {
-        try {
-          ;(window.adsbygoogle = window.adsbygoogle || []).push({})
-        } catch (pushError) {
-          // 忽略重复加载错误
-          if (!pushError.message.includes('already have ads')) {
-            console.error('广告加载失败:', pushError)
-          }
+        const root = document.querySelector('.character-detail-page')
+        const n = root ? root.querySelectorAll('ins.adsbygoogle').length : 0
+        for (let i = 0; i < n; i++) {
+            ;(window.adsbygoogle = window.adsbygoogle || []).push({})
         }
-      })
     } catch (e) {
-      console.error('广告加载失败:', e)
+        console.error('AdSense push failed:', e)
     }
-  } else {
-    // 如果 adsbygoogle 还没加载，延迟重试
-    setTimeout(loadAds, 1000)
-  }
 }
 
-
-  
 onMounted(() => {
   // 加载广告
-  setTimeout(loadAds, 1000)
+  // setTimeout(loadAds, 1000)
+
+  nextTick(() => {
+        loadGoogleAdxAds()
+    })
 })
 
 /**

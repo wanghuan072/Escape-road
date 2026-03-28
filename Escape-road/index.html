@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://escape-road-online.com/" />
-    <title>Escape Road Online.com</title>
 
-    <!-- 性能优化：预连接到外部域名 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://1games.io">
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://escape-road-online.com/" />
+  <title>Escape Road Online.com</title>
 
-    <!-- 预加载关键字体 -->
-    <link rel="preload" href="/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- 延迟加载广告脚本 -->
-    <!-- <script>
+  <!-- 性能优化：预连接到外部域名 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://1games.io">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <!-- 预加载关键字体 -->
+  <link rel="preload" href="/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2" as="font"
+    type="font/woff2" crossorigin>
+  <!-- 延迟加载广告脚本 -->
+  <!-- <script>
       // 延迟加载 AdSense
       window.addEventListener('load', function() {
         setTimeout(function() {
@@ -29,47 +31,56 @@
       });
     </script> -->
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://escape-road-online.com/" />
-    <meta property="og:title" content="Escape Road - Play Thrilling Chase Games Online" />
-    <meta property="og:description" content="Play exciting car chase adventure games like Escape Road, Escape Road 2, and more! Dodge obstacles and escape the police." />
-    <meta property="og:image" content="https://escape-road-online.com/images/og-default.png" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://escape-road-online.com/" />
+  <meta property="og:title" content="Escape Road - Play Thrilling Chase Games Online" />
+  <meta property="og:description"
+    content="Play exciting car chase adventure games like Escape Road, Escape Road 2, and more! Dodge obstacles and escape the police." />
+  <meta property="og:image" content="https://escape-road-online.com/images/og-default.png" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://escape-road-online.com/" />
-    <meta name="twitter:title" content="Escape Road - Play Thrilling Chase Games Online" />
-    <meta name="twitter:description" content="Play exciting car chase adventure games like Escape Road, Escape Road 2, and more! Dodge obstacles and escape the police." />
-    <meta name="twitter:image" content="https://escape-road-online.com/images/og-default.png" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://escape-road-online.com/" />
+  <meta name="twitter:title" content="Escape Road - Play Thrilling Chase Games Online" />
+  <meta name="twitter:description"
+    content="Play exciting car chase adventure games like Escape Road, Escape Road 2, and more! Dodge obstacles and escape the police." />
+  <meta name="twitter:image" content="https://escape-road-online.com/images/og-default.png" />
 
-<!-- 优化的 Google Analytics -->
-<script>
-  // 延迟加载 Google Analytics
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      // 创建 gtag 函数
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', 'G-4WE4HV6121');
+  <!-- 优化的 Google Analytics -->
+  <script>
+    // 延迟加载 Google Analytics
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        // 创建 gtag 函数
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-4WE4HV6121');
 
-      // 动态加载 GA 脚本
-      const script = document.createElement('script');
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4WE4HV6121';
-      script.async = true;
-      document.head.appendChild(script);
-    }, 1000); // 延迟1秒加载
-  });
-</script>
-  </head>
+        // 动态加载 GA 脚本
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4WE4HV6121';
+        script.async = true;
+        document.head.appendChild(script);
+      }, 1000); // 延迟1秒加载
+    });
+  </script>
 
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
 
-      <!-- 数据收集脚本 -->
+  <!-- google ADX 广告引入 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle_direct.js?
+  client=ca-pub-9435047454967498" crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+
+  <!-- 数据收集脚本 -->
   <script src="/collet-data.js"></script>
-  </body>
+</body>
+
 </html>
