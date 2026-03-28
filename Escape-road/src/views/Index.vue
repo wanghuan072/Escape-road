@@ -370,9 +370,9 @@ const adKey = ref(0)
 
 const loadGoogleAdxAds = () => {
     try {
-        const root = document.querySelector('.character-detail-page')
-        const n = root ? root.querySelectorAll('ins.adsbygoogle').length : 0
-        for (let i = 0; i < n; i++) {
+        const root = document.querySelector('main')
+        const ads = root ? root.querySelectorAll('ins.adsbygoogle') : document.querySelectorAll('ins.adsbygoogle')
+        for (let i = 0; i < ads.length; i++) {
             ;(window.adsbygoogle = window.adsbygoogle || []).push({})
         }
     } catch (e) {
