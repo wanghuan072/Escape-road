@@ -17,7 +17,7 @@
         </aside> -->
 
         <!-- ADX 横幅广告-PC-01 -->
-        <aside v-if="!isMobile">
+        <aside v-if="!isMobile" style="text-align: center;">
           <ins
             class="adsbygoogle"
             style="display: inline-block; width: 970px; height: 250px"
@@ -99,7 +99,7 @@
             </aside> -->
 
             <!-- ADX 移动端横幅广告-PH-01 -->
-            <aside v-if="isMobile">
+            <aside v-if="isMobile" style="text-align: center;">
               <ins
                 class="adsbygoogle"
                 style="display: inline-block; width: 300px; height: 250px"
@@ -181,7 +181,7 @@
             </aside> -->
 
             <!-- ADX 横幅广告-PC-02 -->
-            <aside v-if="!isMobile">
+            <aside v-if="!isMobile" style="text-align: center;">
               <ins
                 class="adsbygoogle"
                 style="display: inline-block; width: 970px; height: 250px"
@@ -238,7 +238,7 @@
               </aside> -->
 
               <!-- ADX 移动端横幅广告-PH-02 -->
-              <aside v-if="isMobile">
+              <aside v-if="isMobile" style="text-align: center;">
                 <ins
                   class="adsbygoogle"
                   style="display: inline-block; width: 300px; height: 250px"
@@ -270,7 +270,7 @@
         </aside> -->
 
         <!-- ADX 横幅广告-PC-03 -->
-        <aside v-if="!isMobile">
+        <aside v-if="!isMobile" style="text-align: center;">
           <ins
             class="adsbygoogle"
             style="display: inline-block; width: 970px; height: 250px"
@@ -295,7 +295,7 @@
           </aside> -->
 
           <!-- ADX 移动端横幅广告-PH-03 -->
-          <aside v-if="isMobile">
+          <aside v-if="isMobile" style="text-align: center;">
             <ins
               class="adsbygoogle"
               style="display: inline-block; width: 300px; height: 250px"
