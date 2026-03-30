@@ -256,19 +256,6 @@
           <!-- 主内容区域外层包裹结束 -->
         </div>
 
-        <!-- ADS - 横幅广告-PC -->
-        <!-- <aside class="ads-wrapper" v-if="!isMobile">
-          <ins
-            :key="`pc-top-${adKey}`"
-            class="adsbygoogle"
-            style="display: block"
-            data-ad-client="ca-pub-5437957765171705"
-            data-ad-slot="8679817511"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-        </aside> -->
-
         <!-- ADX 横幅广告-PC-03 -->
         <aside v-if="!isMobile" style="text-align: center;">
           <ins
@@ -308,6 +295,19 @@
 
           <Recommend :game-id="currentGameId" />
         </footer>
+
+        <!-- ADS - 横幅广告-PC -->
+        <aside class="ads-wrapper" v-if="!isMobile">
+          <ins
+            :key="`pc-top-${adKey}`"
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-5437957765171705"
+            data-ad-slot="8679817511"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+        </aside>
       </div>
     </section>
     <ShareLink :url="currentPageUrl" :title="gameData.title" />
@@ -344,29 +344,29 @@ const { isMobile } = useDeviceDetection()
 const adKey = ref(0)
 
 // 手动触发广告加载
-// const loadAds = () => {
-//   if (window.adsbygoogle && typeof window.adsbygoogle.push === 'function') {
-//     try {
-//       // 直接处理所有广告元素，但添加错误处理
-//       const adElements = document.querySelectorAll('.adsbygoogle')
-//       adElements.forEach((el) => {
-//         try {
-//           ;(window.adsbygoogle = window.adsbygoogle || []).push({})
-//         } catch (pushError) {
-//           // 忽略重复加载错误
-//           if (!pushError.message.includes('already have ads')) {
-//             console.error('广告加载失败:', pushError)
-//           }
-//         }
-//       })
-//     } catch (e) {
-//       console.error('广告加载失败:', e)
-//     }
-//   } else {
-//     // 如果 adsbygoogle 还没加载，延迟重试
-//     setTimeout(loadAds, 1000)
-//   }
-// }
+const loadAds = () => {
+  if (window.adsbygoogle && typeof window.adsbygoogle.push === 'function') {
+    try {
+      // 直接处理所有广告元素，但添加错误处理
+      const adElements = document.querySelectorAll('.adsbygoogle')
+      adElements.forEach((el) => {
+        try {
+          ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+        } catch (pushError) {
+          // 忽略重复加载错误
+          if (!pushError.message.includes('already have ads')) {
+            console.error('广告加载失败:', pushError)
+          }
+        }
+      })
+    } catch (e) {
+      console.error('广告加载失败:', e)
+    }
+  } else {
+    // 如果 adsbygoogle 还没加载，延迟重试
+    setTimeout(loadAds, 1000)
+  }
+}
 
 const loadGoogleAdxAds = () => {
     try {
@@ -382,7 +382,7 @@ const loadGoogleAdxAds = () => {
 
 onMounted(() => {
   // 加载广告
-  // setTimeout(loadAds, 1000)
+  setTimeout(loadAds, 1000)
 
   nextTick(() => {
         loadGoogleAdxAds()
