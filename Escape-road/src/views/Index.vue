@@ -802,6 +802,7 @@ watchEffect(() => {
   justify-content: space-between;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* 平板样式 (例如：宽度 <= 1024px) */
