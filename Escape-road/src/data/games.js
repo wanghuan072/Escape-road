@@ -458,7 +458,6 @@ export const games = {
     addressBar: 'Planet-Clicker',
     logoText: 'Planet Clicker',
     image: 'game-08.jpg',
-    location: 'right',
     iframeUrl: 'https://turbowarp.org/377874630/embed',
     showHeader: false,
     // background: 'linear-gradient(135deg, #2c3e50 0%, #3498db 100%)',
@@ -1144,42 +1143,53 @@ export const games = {
 
   game23: {
     id: 'game23',
-    title: 'Tung Sahur Clicker - tung sahur unblocked - sahur clicker game',
+    title: 'Slope Rider 3D - slope rider 3d unblocked - endless sledding game online',
     description:
-      'Tung Sahur Clicker Unblocked — Wake up the neighborhood for Sahur in this hilarious clicker game! Tap fast, ring the bell, and upgrade your gear to become the ultimate Sahur hero.',
-    keywords: 'Tung Sahur Clicker, tung sahur unblocked, sahur clicker game, sahur wake-up game, muslim clicker game',
-    addressBar: 'tung-sahur-clicker',
-    logoText: 'Tung Sahur Clicker',
+      'Slope Rider 3D Unblocked — Ride a sled down endless snowy slopes in fast 3D action. Steer past trees and rocks, jump gaps, collect gift boxes to unlock new sleds, and chase your high score in the browser.',
+    keywords:
+      'Slope Rider 3D, slope rider 3d unblocked, endless runner sled, 3D skiing game, snow sled game online, azgame slope rider',
+    addressBar: 'Slope-Rider-3D',
+    logoText: 'Slope Rider 3D',
     image: 'game23.webp',
-    iframeUrl: 'https://game.azgame.io/tung-sahur-clicker/',
+    iframeUrl: 'https://gamea.azgame.io/slope-rider-3d/',
     showHeader: false,
+    showNew: true,
+    location: 'right',
     aboutContent: `
-      <h2>🔔 Tung Sahur Clicker Unblocked: Wake 'Em All Up!</h2>
-      <p>In <strong>Tung Sahur Clicker Unblocked</strong>, you're the local Sahur hero with one mission — wake everyone up before dawn! Tap like crazy, bang your pot, and make sure the whole neighborhood hears you loud and clear before sunrise!</p>
-  
-      <h3>🕹️ How to Play Tung Sahur Clicker?</h3>
+      <h2>⛷️ Slope Rider 3D Unblocked: Endless Snow Rush</h2>
+      <p><strong>Slope Rider 3D</strong> is a fast-paced endless runner on snow: you speed downhill on a sled along a twisting 3D track. There is no brake — momentum keeps building, so every dodge and jump has to be sharp. Survive as far as you can, beat your distance, and unlock cooler rides as you play. The version here loads in your browser via <a href="https://gamea.azgame.io/slope-rider-3d/" rel="noopener noreferrer">gamea.azgame.io</a>, similar in spirit to other AZ Games–style endless slope titles such as <a href="https://azgames.io/slope-rider-3d" rel="noopener noreferrer">Slope Rider 3D on AZ Games</a>.</p>
+
+      <h3>🕹️ How to Play Slope Rider 3D?</h3>
       <p>
-        <strong>Controls:</strong> Click or tap to make noise. The faster you tap, the louder your Sahur call!<br/>
-        <strong>Goal:</strong> Wake as many people as possible before the Sahur time ends.<br/>
-        <strong>Upgrade:</strong> Use coins to upgrade your bell, pot, speaker, and even unlock hilarious noise-makers.
+        <strong>Goal:</strong> Stay on the slope as long as possible without crashing into obstacles or falling off the track.<br/>
+        <strong>Pace:</strong> You accelerate automatically; focus on steering and timing jumps — react early because the run gets faster over time.<br/>
+        <strong>Collectibles:</strong> Gift boxes can appear along the run; grabbing them often ties into unlocking new sleds or extras (exact rewards depend on the build you’re playing).
       </p>
-  
-      <h3>🎉 Why You'll Love Tung Sahur Clicker</h3>
+
+      <h3>⌨️ Controls</h3>
+      <p>
+        <strong>← → / A D:</strong> Steer left and right across the slope.<br/>
+        <strong>↑ / Space:</strong> Jump to clear logs, gaps, rocks, and low hazards.<br/>
+        <strong>Mouse or touch:</strong> On many browser builds you can drag or swipe to steer smoothly on different devices.<br/>
+        <strong>P / R (if supported):</strong> Pause or restart the run — handy when you want a clean retry.
+      </p>
+
+      <h3>🎯 Obstacles & Skills</h3>
       <ul>
-        <li>Unique Ramadan-themed clicker gameplay</li>
-        <li>Funny animations and quirky sound effects</li>
-        <li>Unlockable upgrades and new characters</li>
-        <li>Simple mechanics, perfect for casual fun</li>
+        <li>Dodge trees, rocks, snowmen, ice blocks, narrow paths, and sudden drops.</li>
+        <li>Learn the rhythm of jumps: jump a little early for logs and gaps so you land with room to turn.</li>
+        <li>Some versions offer difficulty modes (e.g. normal vs hard) — pick what matches your reflexes.</li>
+        <li>Dozens of sled styles are common in this genre; try different ones for feel and control (as described on sites like <a href="https://www.sloperider3d.com/" rel="noopener noreferrer">sloperider3d.com</a>).</li>
       </ul>
-  
+
       <h3>💡 Pro Tips</h3>
-      <p>Max out your speaker early for the biggest impact, and don’t forget to claim your bonuses between rounds. Timing is everything!</p>
-  
-      <h3>🎮 Play Tung Sahur Clicker Unblocked Now</h3>
-      <p>No installs. No login. Just open and tap away. Whether you're killing time or getting into the festive spirit, this game will keep you laughing and clicking!</p>
-  
-      <h2>✨ More Fun Clicker & Humor Games</h2>
-      <p>Try other unique games like Stickman Annihilation, Crazy Sheep 3D, or Doodle Baseball — fast, funny, and absolutely free to play!</p>
+      <p>Favor the middle of the path when you can — it gives you more room to swerve both ways. Don’t greed every gift box if the lane is tight; living longer usually beats one extra pickup. After a rough section, slow your inputs slightly to avoid over-steering.</p>
+
+      <h3>🎮 Play Slope Rider 3D Unblocked Now</h3>
+      <p>No install — open the page and ride. Whether you want a quick one-run break or a long grind for a new best distance, <a href="https://escape-road-online.com/Slope-Rider-3D">Slope Rider 3D</a> fits right in with other high-speed picks like Drive Mad Unblocked, Drift Boss, and Curve Rush.</p>
+
+      <h2>🏔️ More Slope & Speed Games</h2>
+      <p>Also try Curve Rush, Jetski Race, Wacky Flip, and Crazy Sheep 3D — all quick to load and free to play in the browser.</p>
     `,
   },
 
@@ -3402,7 +3412,7 @@ export const games = {
     image: 'game-68.webp',
     iframeUrl: 'https://game.azgame.io/meme-puzzle/',
     showHeader: false,
-    showNew: true,
+    showNew: false,
     aboutContent: `
         <h2>About Meme Puzzle</h2>
         <p><strong>Meme Puzzle</strong> is a lighthearted and entertaining puzzle game where you can enjoy solving jigsaw puzzles featuring hilarious memes. Each puzzle brings a popular meme to life, providing endless fun for casual gamers and meme lovers alike.</p>
