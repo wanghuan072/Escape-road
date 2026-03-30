@@ -36,7 +36,7 @@
           >
             <ins
               class="adsbygoogle"
-              style="display: inline-block; width: 300px; height: 600px"
+              style="display: inline-block; width: 240px; height: 600px"
               data-ad-client="ca-pub-9435047454967498"
               data-ad-slot="escape_road_online_adx_R_L_ban3"
               data-tag-src="gamtg"
@@ -51,7 +51,7 @@
           >
             <ins
               class="adsbygoogle"
-              style="display: inline-block; width: 300px; height: 600px"
+              style="display: inline-block; width: 240px; height: 600px"
               data-ad-client="ca-pub-9435047454967498"
               data-ad-slot="escape_road_online_adx_R_L_ban3"
               data-tag-src="gamtg"
