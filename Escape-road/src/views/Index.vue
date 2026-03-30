@@ -800,7 +800,8 @@ watchEffect(() => {
 .below {
   display: flex;
   justify-content: space-between;
-  padding: 0 100px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* 平板样式 (例如：宽度 <= 1024px) */
