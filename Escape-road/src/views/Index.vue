@@ -2,11 +2,11 @@
   <main>
     <Headers :game-id="currentGameId" />
     <!-- /23346398271/anchor：脚本在挂载后插入 div 内，等同官方「script 在 div 中间」 -->
-    <!-- <div
+    <div
       id="div-gpt-ad-1775617033282-0"
       ref="gamAnchorSlotRef"
       style="min-width: 320px; min-height: 50px"
-    ></div> -->
+    ></div>
     <section>
       <div class="container" :style="{ background: gameData.background }">
         <!-- 头部横幅广告-PC -->
@@ -396,16 +396,16 @@ const loadGoogleAdxAds = () => {
 
 onMounted(() => {
   // GAM：在对应 div 内插入 display 脚本（Vue 模板不能写 <script>）；多版位则多写几个独立函数并在 nextTick 里逐个调用
-  // nextTick(() => {
-  //   const el = gamAnchorSlotRef.value
-  //   if (!el || el.querySelector('script[data-gam-slot="anchor"]')) return
-  //   window.googletag = window.googletag || { cmd: [] }
-  //   const s = document.createElement('script')
-  //   s.setAttribute('data-gam-slot', 'anchor')
-  //   s.textContent =
-  //     "googletag.cmd.push(function () { googletag.display('div-gpt-ad-1775617033282-0'); });"
-  //   el.appendChild(s)
-  // })
+  nextTick(() => {
+    const el = gamAnchorSlotRef.value
+    if (!el || el.querySelector('script[data-gam-slot="anchor"]')) return
+    window.googletag = window.googletag || { cmd: [] }
+    const s = document.createElement('script')
+    s.setAttribute('data-gam-slot', 'anchor')
+    s.textContent =
+      "googletag.cmd.push(function () { googletag.display('div-gpt-ad-1775617033282-0'); });"
+    el.appendChild(s)
+  })
 
   // 加载广告
   setTimeout(loadAds, 1000)
