@@ -1,6 +1,12 @@
 <template>
   <main>
     <Headers :game-id="currentGameId" />
+    <!-- /23346398271/anchor：脚本在挂载后插入 div 内，等同官方「script 在 div 中间」 -->
+    <div
+      id="div-gpt-ad-1775617033282-0"
+      ref="gamAnchorSlotRef"
+      style="min-width: 320px; min-height: 50px"
+    ></div>
     <section>
       <div class="container" :style="{ background: gameData.background }">
         <!-- 头部横幅广告-PC -->
@@ -343,6 +349,9 @@ const { isMobile } = useDeviceDetection()
 // 广告刷新的key，用于强制重新渲染广告
 const adKey = ref(0)
 
+/** GAM anchor 容器 ref，用于把 display 脚本插入 div 内部（与官方 HTML 结构一致） */
+const gamAnchorSlotRef = ref(null)
+
 // 手动触发广告加载
 const loadAds = () => {
   if (window.adsbygoogle && typeof window.adsbygoogle.push === 'function') {
@@ -381,12 +390,24 @@ const loadGoogleAdxAds = () => {
 }
 
 onMounted(() => {
+  // GAM anchor：在 div 内插入与官方相同的内联 script（Vue 模板内不能写 <script>）
+  nextTick(() => {
+    const el = gamAnchorSlotRef.value
+    if (!el || el.querySelector('script[data-gpt-anchor-display]')) return
+    window.googletag = window.googletag || { cmd: [] }
+    const s = document.createElement('script')
+    s.setAttribute('data-gpt-anchor-display', '1')
+    s.textContent =
+      "googletag.cmd.push(function () { googletag.display('div-gpt-ad-1775617033282-0'); });"
+    el.appendChild(s)
+  })
+
   // 加载广告
   setTimeout(loadAds, 1000)
 
   nextTick(() => {
-        loadGoogleAdxAds()
-    })
+    loadGoogleAdxAds()
+  })
 })
 
 /**
