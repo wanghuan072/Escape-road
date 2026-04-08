@@ -2,11 +2,11 @@
   <main>
     <Headers :game-id="currentGameId" />
     <!-- /23346398271/anchor：脚本在挂载后插入 div 内，等同官方「script 在 div 中间」 -->
-    <div
+    <!-- <div
       id="div-gpt-ad-1775617033282-0"
       ref="gamAnchorSlotRef"
       style="min-width: 320px; min-height: 50px"
-    ></div>
+    ></div> -->
     <section>
       <div class="container" :style="{ background: gameData.background }">
         <!-- 头部横幅广告-PC -->
@@ -349,8 +349,13 @@ const { isMobile } = useDeviceDetection()
 // 广告刷新的key，用于强制重新渲染广告
 const adKey = ref(0)
 
-/** GAM anchor 容器 ref，用于把 display 脚本插入 div 内部（与官方 HTML 结构一致） */
+/** GAM：每个版位一个 ref + 一段挂载函数（复制粘贴改 id / data-gam-slot 即可，互不影响） */
 const gamAnchorSlotRef = ref(null)
+
+// 多版位时按同样模式增加，例如：
+// const gptBannerRoot = ref(null)
+// const mountGptBan1BodyScript = () => { ... appendChild display('div-gpt-ad-1774496814316-0') ... data-gam-slot="ban1" }
+// onMounted → nextTick 里依次 mountGptBan1BodyScript(); mountGptBan11BodyScript();
 
 // 手动触发广告加载
 const loadAds = () => {
@@ -390,17 +395,17 @@ const loadGoogleAdxAds = () => {
 }
 
 onMounted(() => {
-  // GAM anchor：在 div 内插入与官方相同的内联 script（Vue 模板内不能写 <script>）
-  nextTick(() => {
-    const el = gamAnchorSlotRef.value
-    if (!el || el.querySelector('script[data-gpt-anchor-display]')) return
-    window.googletag = window.googletag || { cmd: [] }
-    const s = document.createElement('script')
-    s.setAttribute('data-gpt-anchor-display', '1')
-    s.textContent =
-      "googletag.cmd.push(function () { googletag.display('div-gpt-ad-1775617033282-0'); });"
-    el.appendChild(s)
-  })
+  // GAM：在对应 div 内插入 display 脚本（Vue 模板不能写 <script>）；多版位则多写几个独立函数并在 nextTick 里逐个调用
+  // nextTick(() => {
+  //   const el = gamAnchorSlotRef.value
+  //   if (!el || el.querySelector('script[data-gam-slot="anchor"]')) return
+  //   window.googletag = window.googletag || { cmd: [] }
+  //   const s = document.createElement('script')
+  //   s.setAttribute('data-gam-slot', 'anchor')
+  //   s.textContent =
+  //     "googletag.cmd.push(function () { googletag.display('div-gpt-ad-1775617033282-0'); });"
+  //   el.appendChild(s)
+  // })
 
   // 加载广告
   setTimeout(loadAds, 1000)
