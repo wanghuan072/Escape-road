@@ -85,7 +85,7 @@
     多个 defineSlot 写在同一个 googletag.cmd.push 回调里即可；重复第二段 head 里再 enableServices() 容易导致异常或无效。
     gpt.js 重复标签可依赖缓存，但逻辑上仍建议只写一行 async src。
   -->
-  <!-- <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
   <script>
     window.googletag = window.googletag || { cmd: [] };
     googletag.cmd.push(function () {
@@ -93,7 +93,7 @@
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });
-  </script> -->
+  </script>
 </head>
 
 <body>
