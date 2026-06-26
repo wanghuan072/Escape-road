@@ -13,13 +13,15 @@
   <link rel="preconnect" href="https://1games.io">
   <link rel="preconnect" href="https://pagead2.googlesyndication.com">
   <link rel="preconnect" href="https://www.googletagmanager.com">
+  <!-- GAM 已停用
   <link rel="preconnect" href="https://securepubads.g.doubleclick.net">
+  -->
 
   <!-- 预加载关键字体 -->
   <link rel="preload" href="/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2" as="font"
     type="font/woff2" crossorigin>
-  <!-- 延迟加载广告脚本 -->
-  <!-- <script>
+  <!-- 延迟加载 AdSense 脚本 -->
+  <script>
       // 延迟加载 AdSense
       window.addEventListener('load', function() {
         setTimeout(function() {
@@ -30,7 +32,7 @@
           document.head.appendChild(script);
         }, 2000); // 延迟2秒加载
       });
-    </script> -->
+    </script>
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -75,25 +77,26 @@
 
 
 
-  <!-- google ADX 广告引入（src 须单行，避免 URL 含换行导致加载失败） -->
+  <!-- ADX 已停用（恢复时取消注释）
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle_direct.js?client=ca-pub-9435047454967498"
     crossorigin="anonymous"></script>
-
-  <!--
-    Google Publisher Tag (GAM) — 多版位时请在本页只保留「一次」gpt.js +「一次」enableSingleRequest/enableServices。
-    多个 defineSlot 写在同一个 googletag.cmd.push 回调里即可；重复第二段 head 里再 enableServices() 容易导致异常或无效。
-    gpt.js 重复标签可依赖缓存，但逻辑上仍建议只写一行 async src。
   -->
+
+  <!-- GAM 已停用（恢复时取消注释）
   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
   <script>
     window.googletag = window.googletag || { cmd: [] };
     googletag.cmd.push(function () {
       googletag.defineSlot('/23346398271/anchor', [320, 50], 'div-gpt-ad-1775617033282-0').addService(googletag.pubads());
+      // 更多版位示例（与后台一致后取消注释，且勿再新开一段 enableServices）：
+      // googletag.defineSlot('/23346398271/ban1', [[320, 50], [970, 90]], 'div-gpt-ad-1774496814316-0').addService(googletag.pubads());
+      // googletag.defineSlot('/23346398271/ban1/ban1.1', [970, 250], 'div-gpt-ad-1774506633150-0').addService(googletag.pubads());
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });
   </script>
+  -->
 </head>
 
 <body>

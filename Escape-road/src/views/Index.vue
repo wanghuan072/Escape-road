@@ -1,16 +1,18 @@
 <template>
   <main>
     <Headers :game-id="currentGameId" />
-    <!-- /23346398271/anchor：脚本在挂载后插入 div 内，等同官方「script 在 div 中间」 -->
+    <!-- GAM 已停用（恢复时取消注释）
+    /23346398271/anchor：脚本在挂载后插入 div 内，等同官方「script 在 div 中间」
     <div
       id="div-gpt-ad-1775617033282-0"
       ref="gamAnchorSlotRef"
       style="min-width: 320px; min-height: 50px"
     ></div>
+    -->
     <section>
       <div class="container" :style="{ background: gameData.background }">
         <!-- 头部横幅广告-PC -->
-        <!-- <aside class="ads-wrapper" v-if="!isMobile">
+        <aside class="ads-wrapper" v-if="!isMobile">
           <ins
             :key="`pc-top-${adKey}`"
             class="adsbygoogle"
@@ -20,9 +22,10 @@
             data-ad-format="auto"
             data-full-width-responsive="true"
           ></ins>
-        </aside> -->
+        </aside>
 
-        <!-- ADX 横幅广告-PC-01 -->
+        <!-- ADX 已停用（恢复时取消注释）
+        ADX 横幅广告-PC-01
         <aside v-if="!isMobile" style="text-align: center;">
           <ins
             class="adsbygoogle"
@@ -33,9 +36,11 @@
           >
           </ins>
         </aside>
+        -->
 
         <div class="game-wrap">
-          <!-- ADX 左侧广告-PC-04 -->
+          <!-- ADX 已停用（恢复时取消注释）
+          ADX 左侧广告-PC-04
           <aside
             v-if="!isMobile"
             style="position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 1000"
@@ -50,7 +55,7 @@
             </ins>
           </aside>
 
-          <!-- ADX 右侧广告-PC-05 -->
+          ADX 右侧广告-PC-05
           <aside
             v-if="!isMobile"
             style="position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 1000"
@@ -64,9 +69,10 @@
             >
             </ins>
           </aside>
+          -->
 
           <!-- 左侧广告-PC -->
-          <!-- <aside class="ads-wrapper ads-left" v-if="!isMobile">
+          <aside class="ads-wrapper ads-left" v-if="!isMobile">
             <ins
               :key="`pc-left-${adKey}`"
               class="adsbygoogle"
@@ -76,10 +82,10 @@
               data-ad-format="auto"
               data-full-width-responsive="true"
             ></ins>
-          </aside> -->
+          </aside>
 
           <!-- 右侧广告-PC -->
-          <!-- <aside class="ads-wrapper ads-right" v-if="!isMobile">
+          <aside class="ads-wrapper ads-right" v-if="!isMobile">
             <ins
               :key="`pc-right-${adKey}`"
               class="adsbygoogle"
@@ -89,12 +95,12 @@
               data-ad-format="auto"
               data-full-width-responsive="true"
             ></ins>
-          </aside> -->
+          </aside>
 
           <!-- 新增：主内容区域外层包裹 -->
           <div class="game-main-area">
             <!-- 移动端头部广告-PH -->
-            <!-- <aside class="ads-wrapper" v-if="isMobile">
+            <aside class="ads-wrapper" v-if="isMobile">
               <ins
                 :key="`mobile-top-${adKey}`"
                 class="adsbygoogle"
@@ -102,9 +108,10 @@
                 data-ad-client="ca-pub-5437957765171705"
                 data-ad-slot="2038341488"
               ></ins>
-            </aside> -->
+            </aside>
 
-            <!-- ADX 移动端横幅广告-PH-01 -->
+            <!-- ADX 已停用（恢复时取消注释）
+            ADX 移动端横幅广告-PH-01
             <aside v-if="isMobile" style="text-align: center;">
               <ins
                 class="adsbygoogle"
@@ -115,6 +122,7 @@
               >
               </ins>
             </aside>
+            -->
 
             <!-- 桌面端布局 -->
             <div class="game-list desktop-only" role="main" aria-label="Game collection">
@@ -174,7 +182,7 @@
             </div>
 
             <!-- Escaperoad-展示广告纵向3 -->
-            <!-- <aside class="ads-wrapper" v-if="!isMobile">
+            <aside class="ads-wrapper" v-if="!isMobile">
               <ins
                 :key="`pc-top-${adKey}`"
                 class="adsbygoogle"
@@ -184,9 +192,10 @@
                 data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
-            </aside> -->
+            </aside>
 
-            <!-- ADX 横幅广告-PC-02 -->
+            <!-- ADX 已停用（恢复时取消注释）
+            ADX 横幅广告-PC-02
             <aside v-if="!isMobile" style="text-align: center;">
               <ins
                 class="adsbygoogle"
@@ -197,6 +206,7 @@
               >
               </ins>
             </aside>
+            -->
 
             <!-- PC端NewGames，桌面端显示 -->
             <NewGames class="desktop-only" />
@@ -233,7 +243,7 @@
                 </div>
               </section>
               <!-- 移动端中部广告-PH -->
-              <!-- <aside class="ads-wrapper" v-if="isMobile">
+              <aside class="ads-wrapper" v-if="isMobile">
                 <ins
                   :key="`mobile-middle-${adKey}`"
                   class="adsbygoogle"
@@ -241,9 +251,10 @@
                   data-ad-client="ca-pub-5437957765171705"
                   data-ad-slot="3120053515"
                 ></ins>
-              </aside> -->
+              </aside>
 
-              <!-- ADX 移动端横幅广告-PH-02 -->
+              <!-- ADX 已停用（恢复时取消注释）
+              ADX 移动端横幅广告-PH-02
               <aside v-if="isMobile" style="text-align: center;">
                 <ins
                   class="adsbygoogle"
@@ -254,6 +265,7 @@
                 >
                 </ins>
               </aside>
+              -->
 
               <!-- 移动端NewGames，只在这里渲染一次 -->
               <NewGames />
@@ -262,7 +274,8 @@
           <!-- 主内容区域外层包裹结束 -->
         </div>
 
-        <!-- ADX 横幅广告-PC-03 -->
+        <!-- ADX 已停用（恢复时取消注释）
+        ADX 横幅广告-PC-03
         <aside v-if="!isMobile" style="text-align: center;">
           <ins
             class="adsbygoogle"
@@ -273,11 +286,12 @@
           >
           </ins>
         </aside>
+        -->
 
         <footer class="below" role="contentinfo" aria-label="Game information and recommendations">
           <About :game-id="currentGameId" />
           <!-- 移动端底部广告-PH -->
-          <!-- <aside class="ads-wrapper" v-if="isMobile">
+          <aside class="ads-wrapper" v-if="isMobile">
             <ins
               :key="`mobile-bottom-${adKey}`"
               class="adsbygoogle"
@@ -285,9 +299,10 @@
               data-ad-client="ca-pub-5437957765171705"
               data-ad-slot="2118232531"
             ></ins>
-          </aside> -->
+          </aside>
 
-          <!-- ADX 移动端横幅广告-PH-03 -->
+          <!-- ADX 已停用（恢复时取消注释）
+          ADX 移动端横幅广告-PH-03
           <aside v-if="isMobile" style="text-align: center;">
             <ins
               class="adsbygoogle"
@@ -298,6 +313,7 @@
             >
             </ins>
           </aside>
+          -->
 
           <Recommend :game-id="currentGameId" />
         </footer>
@@ -349,8 +365,9 @@ const { isMobile } = useDeviceDetection()
 // 广告刷新的key，用于强制重新渲染广告
 const adKey = ref(0)
 
-/** GAM：每个版位一个 ref + 一段挂载函数（复制粘贴改 id / data-gam-slot 即可，互不影响） */
+/** GAM 已停用（恢复时取消注释）
 const gamAnchorSlotRef = ref(null)
+*/
 
 // 多版位时按同样模式增加，例如：
 // const gptBannerRoot = ref(null)
@@ -382,6 +399,7 @@ const loadAds = () => {
   }
 }
 
+/* ADX 已停用（恢复时取消注释）
 const loadGoogleAdxAds = () => {
     try {
         const root = document.querySelector('main')
@@ -393,9 +411,10 @@ const loadGoogleAdxAds = () => {
         console.error('AdSense push failed:', e)
     }
 }
+*/
 
 onMounted(() => {
-  // GAM：在对应 div 内插入 display 脚本（Vue 模板不能写 <script>）；多版位则多写几个独立函数并在 nextTick 里逐个调用
+  /* GAM 已停用（恢复时取消注释）
   nextTick(() => {
     const el = gamAnchorSlotRef.value
     if (!el || el.querySelector('script[data-gam-slot="anchor"]')) return
@@ -406,13 +425,16 @@ onMounted(() => {
       "googletag.cmd.push(function () { googletag.display('div-gpt-ad-1775617033282-0'); });"
     el.appendChild(s)
   })
+  */
 
   // 加载广告
   setTimeout(loadAds, 1000)
 
+  /* ADX 已停用（恢复时取消注释）
   nextTick(() => {
     loadGoogleAdxAds()
   })
+  */
 })
 
 /**
